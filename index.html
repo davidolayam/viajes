@@ -3,74 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cono Sur & Fin del Mundo · Marzo 2026</title>
+<title>Cono Sur & Fin del Mundo · Marzo 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#0e0c0a;--paper:#f8f4ee;--cream:#efe9df;--muted:#7a736a;
-  --line:#e0d8cc;--scl:#c03b15;--arg:#1e52a0;--ush:#186042;--igu:#6035a0;--gold:#b5780a;
-}
+:root{--ink:#0e0c0a;--paper:#f8f4ee;--cream:#efe9df;--muted:#7a736a;--line:#e0d8cc;--scl:#c03b15;--arg:#1e52a0;--ush:#186042;--igu:#6035a0;--gold:#b5780a}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
-
 .hero{position:relative;height:100vh;min-height:560px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0e0c0a}
 .hero-slides{position:absolute;inset:0}
 .hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
 .hslide.active{opacity:1}
-.hslide::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,8,6,.3) 0%,rgba(10,8,6,.6) 60%,rgba(10,8,6,.88) 100%)}
+.hslide::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,8,6,.55) 0%,rgba(10,8,6,.7) 60%,rgba(10,8,6,.92) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:760px}
-.hero-eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1rem;animation:fadeUp .9s ease both}
-.hero h1{font-family:'Fraunces',serif;font-size:clamp(3rem,9vw,6.5rem);font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem;animation:fadeUp .9s .1s ease both}
-.hero h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.55)}
-.hero-sub{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:2rem;animation:fadeUp .9s .2s ease both}
-.hero-flags{display:flex;align-items:center;justify-content:center;gap:10px;font-size:1.7rem;animation:fadeUp .9s .3s ease both}
-.hero-flags span{font-size:12px;color:rgba(255,255,255,.28)}
-.hero-arrow{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.3);font-size:11px;letter-spacing:.12em;text-transform:uppercase;animation:fadeIn 1s .8s both;cursor:pointer;background:none;border:none}
-.arrow-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:pulse 2s ease-in-out infinite}
+.hero-eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:1rem;animation:fadeUp .9s ease both;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(3rem,9vw,6.5rem);font-weight:700;color:#fff;line-height:1;margin-bottom:.5rem;animation:fadeUp .9s .1s ease both;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.hero h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.65)}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:0;animation:fadeUp .9s .2s ease both;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero-arrow{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.12em;text-transform:uppercase;animation:fadeIn 1s .8s both;cursor:pointer;background:none;border:none}
+.arrow-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:pulse 2s ease-in-out infinite}
 .hero-dots{position:absolute;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px}
 .hdot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;border:none}
 .hdot.active{background:#fff;width:20px;border-radius:3px}
-
-.nav{position:sticky;top:0;z-index:100;background:rgba(248,244,238,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;justify-content:center}
-.nav-btn{padding:.85rem 1.6rem;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap}
+.nav{position:sticky;top:0;z-index:100;background:rgba(248,244,238,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;justify-content:center}
+.nav-btn{padding:.85rem 1.4rem;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap}
 .nav-btn:hover{color:var(--ink)}
 .nav-btn.active{color:var(--ink);border-bottom-color:var(--ink)}
-
-.section{display:none}
-.section.active{display:block}
-
+.section{display:none}.section.active{display:block}
+/* CALENDAR */
+.cal-wrap{max-width:900px;margin:0 auto;padding:3rem 1.5rem}
+.sec-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+.cal-month-title{font-family:'Fraunces',serif;font-size:26px;font-weight:700;margin-bottom:1.25rem}
+.cal-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.5rem}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.leg-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.leg-dot.scl{background:var(--scl)}.leg-dot.arg{background:var(--arg)}.leg-dot.ush{background:var(--ush)}.leg-dot.igu{background:var(--igu)}.leg-dot.fly{background:#888}
+.cal-grid-wrap{background:#fff;border-radius:16px;border:1px solid var(--line);overflow:hidden;margin-bottom:1.5rem}
+.cal-dow{display:grid;grid-template-columns:repeat(7,1fr);background:var(--cream);border-bottom:1px solid var(--line)}
+.cal-dow span{text-align:center;padding:.5rem 0;font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-cell{min-height:76px;padding:7px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:default;transition:background .15s;position:relative}
+.cal-cell:nth-child(7n){border-right:none}
+.cal-cell.empty{background:var(--paper)}
+.cal-cell.trip{cursor:pointer}
+.cal-cell.trip:hover{background:#fdf5ec}
+.cal-cell.selected{background:#fff5e8;outline:2px solid var(--gold);outline-offset:-2px;z-index:1}
+.cal-num{font-size:13px;font-weight:500;color:#ccc;margin-bottom:5px}
+.cal-cell.trip .cal-num{color:var(--ink);font-weight:600}
+.cal-tag{font-size:9px;font-weight:600;padding:2px 5px;border-radius:4px;display:block;line-height:1.4;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.cal-tag.scl{background:#fde3d8;color:#8a2810}
+.cal-tag.arg{background:#d8e4f7;color:#102d60}
+.cal-tag.ush{background:#d6eee0;color:#0c3a22}
+.cal-tag.igu{background:#e8d8f7;color:#38186a}
+.cal-tag.fly{background:#e5e2dc;color:#333}
+/* DETAIL */
+.detail-panel{background:#fff;border-radius:16px;border:1px solid var(--line);overflow:hidden;margin-bottom:2rem;display:none}
+.detail-panel.open{display:block;animation:fadeUp .3s ease}
+.detail-city-bar{height:5px;width:100%}
+.detail-city-bar.scl{background:var(--scl)}.detail-city-bar.arg{background:var(--arg)}.detail-city-bar.ush{background:var(--ush)}.detail-city-bar.igu{background:var(--igu)}.detail-city-bar.fly{background:#aaa}
+.detail-img{width:100%;height:240px;object-fit:cover;display:block}
+.detail-body{padding:1.25rem 1.5rem}
+.detail-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem}
+.detail-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--muted);line-height:1;padding:0}
+.detail-date{font-size:12px;color:var(--muted);margin-bottom:.3rem}
+.detail-title{font-family:'Fraunces',serif;font-size:24px;font-weight:700;margin-bottom:.6rem;line-height:1.2}
+.detail-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+.detail-spots{display:flex;flex-wrap:wrap;gap:6px}
+.dspot{font-size:12px;padding:4px 11px;border-radius:20px;background:var(--cream);border:1px solid var(--line)}
 /* TIMELINE */
 .timeline-wrap{max-width:900px;margin:0 auto;padding:3rem 1.5rem}
-.sec-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem}
 .tl-city-header{display:flex;align-items:center;gap:12px;margin:2.5rem 0 1rem}
 .tl-city-header:first-child{margin-top:0}
 .city-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:30px;font-size:12px;font-weight:500}
-.city-pill.scl{background:#fde3d8;color:var(--scl)}
-.city-pill.arg{background:#d8e4f7;color:var(--arg)}
-.city-pill.ush{background:#d6eee0;color:var(--ush)}
-.city-pill.igu{background:#e8d8f7;color:var(--igu)}
+.city-pill.scl{background:#fde3d8;color:var(--scl)}.city-pill.arg{background:#d8e4f7;color:var(--arg)}.city-pill.ush{background:#d6eee0;color:var(--ush)}.city-pill.igu{background:#e8d8f7;color:var(--igu)}
 .tl-city-line{flex:1;height:1px;background:var(--line)}
-
 .day-card{display:grid;grid-template-columns:220px 1fr;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-bottom:12px;transition:transform .2s,box-shadow .2s}
 .day-card:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(0,0,0,.08)}
 .day-img{position:relative;overflow:hidden;min-height:160px}
-.day-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block}
+.day-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}
 .day-card:hover .day-img img{transform:scale(1.05)}
 .day-num-badge{position:absolute;top:10px;left:10px;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center}
 .day-body{padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .day-date-lbl{font-size:11px;color:var(--muted)}
-.day-title{font-family:'Fraunces',serif;font-size:19px;font-weight:700;line-height:1.2;color:var(--ink)}
+.day-title{font-family:'Fraunces',serif;font-size:19px;font-weight:700;line-height:1.2}
 .day-desc{font-size:13px;color:var(--muted);line-height:1.55}
 .day-spots{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
-.spot{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--cream);color:var(--ink);border:1px solid var(--line)}
-
+.spot{font-size:11px;padding:3px 9px;border-radius:20px;background:var(--cream);border:1px solid var(--line)}
 .fly-row{display:flex;align-items:center;gap:10px;padding:.75rem 1rem;background:var(--cream);border-radius:10px;border:1px solid var(--line);margin-bottom:12px}
-.fly-icon{font-size:1.2rem}
-.fly-route{font-size:13px;font-weight:500}
-.fly-note{font-size:12px;color:var(--muted)}
-
+.fly-icon{font-size:1.2rem}.fly-route{font-size:13px;font-weight:500}.fly-note{font-size:12px;color:var(--muted)}
 /* DESTINOS */
 .dest-wrap{max-width:960px;margin:0 auto;padding:3rem 1.5rem}
 .dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:1.5rem}
@@ -79,21 +100,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);o
 .dest-img{height:180px;overflow:hidden}
 .dest-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .dest-card:hover .dest-img img{transform:scale(1.06)}
-.dest-info{padding:1.1rem 1.1rem 1.25rem}
+.dest-info{padding:1.1rem}
 .dest-flag{font-size:1.5rem;margin-bottom:.4rem}
 .dest-info h3{font-family:'Fraunces',serif;font-size:21px;font-weight:700;margin-bottom:.3rem}
 .dest-nights{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;margin-bottom:.6rem}
 .dest-info p{font-size:12.5px;color:var(--muted);line-height:1.6}
-.dest-card.dc-scl .dest-info h3{color:var(--scl)}
-.dest-card.dc-scl .dest-nights{background:#fde3d8;color:var(--scl)}
-.dest-card.dc-arg .dest-info h3{color:var(--arg)}
-.dest-card.dc-arg .dest-nights{background:#d8e4f7;color:var(--arg)}
-.dest-card.dc-ush .dest-info h3{color:var(--ush)}
-.dest-card.dc-ush .dest-nights{background:#d6eee0;color:var(--ush)}
-.dest-card.dc-igu .dest-info h3{color:var(--igu)}
-.dest-card.dc-igu .dest-nights{background:#e8d8f7;color:var(--igu)}
+.dc-scl .dest-info h3{color:var(--scl)}.dc-scl .dest-nights{background:#fde3d8;color:var(--scl)}
+.dc-arg .dest-info h3{color:var(--arg)}.dc-arg .dest-nights{background:#d8e4f7;color:var(--arg)}
+.dc-ush .dest-info h3{color:var(--ush)}.dc-ush .dest-nights{background:#d6eee0;color:var(--ush)}
+.dc-igu .dest-info h3{color:var(--igu)}.dc-igu .dest-nights{background:#e8d8f7;color:var(--igu)}
 .dest-note{padding:1rem 1.25rem;background:#edf7ed;border-radius:10px;border-left:3px solid #4caf50;font-size:13.5px;color:#2a5c2a;line-height:1.65}
-
 /* COSTOS */
 .costs-wrap{max-width:800px;margin:0 auto;padding:3rem 1.5rem}
 .pax-toggle{display:inline-flex;background:var(--cream);border-radius:30px;padding:4px;margin-bottom:2rem;border:1px solid var(--line)}
@@ -103,33 +119,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);o
 .flight-rows{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem}
 .flight-row{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.25rem;background:#fff;border-radius:10px;border:1px solid var(--line);transition:box-shadow .2s}
 .flight-row:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.fr-route{font-size:14px;font-weight:500}
-.fr-note{font-size:12px;color:var(--muted);margin-top:2px}
-.fr-price{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--ink)}
+.fr-route{font-size:14px;font-weight:500}.fr-note{font-size:12px;color:var(--muted);margin-top:2px}
+.fr-price{font-family:'Fraunces',serif;font-size:26px;font-weight:700}
 .sum-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem}
 .sum-card{padding:1.2rem 1.25rem;border-radius:12px;border:1px solid var(--line);background:var(--cream)}
 .sum-card .sl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.4rem}
-.sum-card .sv{font-family:'Fraunces',serif;font-size:34px;font-weight:700;color:var(--ink)}
+.sum-card .sv{font-family:'Fraunces',serif;font-size:34px;font-weight:700}
 .sum-card .sn{font-size:12px;color:var(--muted);margin-top:2px}
 .total-bar{padding:1.25rem 1.5rem;border-radius:14px;background:var(--ink);display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
-.total-bar .tl{color:rgba(255,255,255,.45);font-size:12px}
-.total-bar .ts{color:rgba(255,255,255,.28);font-size:11px;margin-top:2px}
+.total-bar .tl{color:rgba(255,255,255,.45);font-size:12px}.total-bar .ts{color:rgba(255,255,255,.28);font-size:11px;margin-top:2px}
 .total-bar .tv{font-family:'Fraunces',serif;font-size:38px;font-weight:700;color:#fff}
 .disc{padding:1rem 1.25rem;background:#fffbf0;border-radius:10px;border-left:3px solid var(--gold);font-size:13px;color:#7a5c0a;line-height:1.65}
 .disc strong{color:#5a4008}
-
 footer{text-align:center;padding:2.5rem 1rem;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:.4}50%{opacity:.9}}
-
 @media(max-width:600px){
-  .day-card{grid-template-columns:1fr}
-  .day-img{min-height:180px}
-  .sum-grid{grid-template-columns:1fr}
-  .total-bar{flex-direction:column;align-items:flex-start;gap:6px}
-  .nav-btn{padding:.8rem .9rem;font-size:12px}
+  .day-card{grid-template-columns:1fr}.day-img{min-height:180px}
+  .sum-grid{grid-template-columns:1fr}.total-bar{flex-direction:column;align-items:flex-start;gap:6px}
+  .nav-btn{padding:.8rem .7rem;font-size:12px}
+  .cal-cell{min-height:58px;padding:5px}.cal-tag{font-size:8px;padding:1px 4px}
 }
 </style>
 </head>
@@ -138,10 +148,9 @@ footer{text-align:center;padding:2.5rem 1rem;border-top:1px solid var(--line);fo
 <section class="hero">
   <div class="hero-slides" id="heroSlides"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Viaje grupal · 15 – 28 de marzo 2026</p>
+    <p class="hero-eyebrow">Viaje grupal · 15 – 28 de marzo 2027</p>
     <h1>Cono Sur<br><em>&amp; Fin del Mundo</em></h1>
     <p class="hero-sub">13 días · 4 destinos · entrada y salida por Chile</p>
-    <div class="hero-flags">🇪🇨 <span>›</span> 🇨🇱 <span>›</span> 🇦🇷 <span>›</span> 🏔️ <span>›</span> 💦 <span>›</span> 🇨🇱 <span>›</span> 🇪🇨</div>
   </div>
   <div class="hero-dots" id="heroDots"></div>
   <button class="hero-arrow" onclick="document.querySelector('.nav').scrollIntoView({behavior:'smooth'})">
@@ -151,14 +160,48 @@ footer{text-align:center;padding:2.5rem 1rem;border-top:1px solid var(--line);fo
 </section>
 
 <nav class="nav">
-  <button class="nav-btn active" onclick="showTab('itinerario',this)">Itinerario</button>
+  <button class="nav-btn active" onclick="showTab('calendario',this)">Calendario</button>
+  <button class="nav-btn" onclick="showTab('itinerario',this)">Itinerario</button>
   <button class="nav-btn" onclick="showTab('destinos',this)">Destinos</button>
   <button class="nav-btn" onclick="showTab('costos',this)">Costos</button>
 </nav>
 
-<section id="itinerario" class="section active">
+<section id="calendario" class="section active">
+  <div class="cal-wrap">
+    <p class="sec-label">Toca cualquier día del viaje para ver la actividad</p>
+    <p class="cal-month-title">Marzo 2027</p>
+    <div class="cal-legend">
+      <div class="leg-item"><div class="leg-dot scl"></div>Santiago de Chile</div>
+      <div class="leg-item"><div class="leg-dot arg"></div>Buenos Aires</div>
+      <div class="leg-item"><div class="leg-dot ush"></div>Ushuaia</div>
+      <div class="leg-item"><div class="leg-dot igu"></div>Puerto Iguazú</div>
+      <div class="leg-item"><div class="leg-dot fly"></div>Vuelo</div>
+    </div>
+    <div class="cal-grid-wrap">
+      <div class="cal-dow">
+        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+      </div>
+      <div class="cal-days" id="calDays"></div>
+    </div>
+    <div class="detail-panel" id="detailPanel">
+      <div class="detail-city-bar" id="detailBar"></div>
+      <img class="detail-img" id="detailImg" src="" alt="">
+      <div class="detail-body">
+        <div class="detail-header">
+          <p class="detail-date" id="detailDate"></p>
+          <button class="detail-close" onclick="closeDetail()">✕</button>
+        </div>
+        <p class="detail-title" id="detailTitle"></p>
+        <p class="detail-desc" id="detailDesc"></p>
+        <div class="detail-spots" id="detailSpots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="itinerario" class="section">
   <div class="timeline-wrap">
-    <p class="sec-label">Día a día · Marzo 2026</p>
+    <p class="sec-label">Día a día · Marzo 2027</p>
     <div id="timeline"></div>
   </div>
 </section>
@@ -168,7 +211,7 @@ footer{text-align:center;padding:2.5rem 1rem;border-top:1px solid var(--line);fo
     <p class="sec-label">Los 4 destinos</p>
     <div class="dest-grid" id="destGrid"></div>
     <div class="dest-note">
-      ✅ <strong>13 días aprovechados al máximo.</strong> Entrada y salida por Chile simplifica el vuelo internacional. Buenos Aires con 3 días completos para conocerla bien, y 2 días finales en Santiago para descansar antes de volver a casa.
+      ✅ <strong>13 días aprovechados al máximo.</strong> Entrada y salida por Chile simplifica el vuelo internacional. Buenos Aires con 3 días completos, y un día final en Santiago para descansar antes de volver a casa.
     </div>
   </div>
 </section>
@@ -195,156 +238,137 @@ footer{text-align:center;padding:2.5rem 1rem;border-top:1px solid var(--line);fo
 </section>
 
 <footer>
-  <p>🌍 Itinerario organizado con ❤️ para el grupo viajero · Marzo 2026</p>
+  <p>🌍 Itinerario organizado con ❤️ para el grupo viajero · Marzo 2027</p>
   <p style="margin-top:6px;font-size:11px">Precios referenciales sujetos a disponibilidad</p>
 </footer>
 
 <script>
-const HERO_IMGS = [
-  'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80',
-  'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1600&q=80',
-  'https://images.unsplash.com/photo-1531761535209-83ea2fd9d8ce?w=1600&q=80',
-  'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=1600&q=80',
-];
+// FECHAS VERIFICADAS PYTHON — MARZO 2027
+// 15=Lun 16=Mar 17=Mié 18=Jue 19=Vie 20=Sáb 21=Dom
+// 22=Lun 23=Mar 24=Mié 25=Jue 26=Vie 27=Sáb 28=Dom
 
-// itinerario corregido: +1 día BA, -1 día Chile final
-// Sáb 15 - llegada SCL
-// Dom 16 - vuelo SCL→EZE, llegada BA
-// Lun 17 - BA día 1
-// Mar 18 - BA día 2
-// Mié 19 - BA día 3  ← nuevo
-// Jue 20 - vuelo EZE→USH
-// Vie 21 - Ushuaia día 1
-// Sáb 22 - Ushuaia día 2
-// Dom 23 - vuelo USH→EZE
-// Lun 24 - vuelo EZE→IGR, tarde libre
-// Mar 25 - Cataratas + vuelo nocturno EZE
-// Mié 26 - vuelo EZE→SCL, Santiago
-// Jue 27 - Santiago día final  ← solo 2 noches
-// Vie 28 - vuelo SCL→ECU
+const TRIP = {
+  15:{city:'scl', label:'Lunes 15 de marzo',     tag:'Llegada SCL',    title:'Llegamos a Santiago ✈',           desc:'Vuelo desde Ecuador. Llegada, check-in y descanso total. ¡El viaje comienza!', spots:[], img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=800&q=80'},
+  16:{city:'fly', label:'Martes 16 de marzo',     tag:'Vuelo SCL→EZE',  title:'Santiago → Buenos Aires ✈',       desc:'Vuelo SCL–EZE a primera hora. Llegada, check-in y recorrido por Puerto Madero o el Obelisco.', spots:['Vuelo SCL–EZE','Puerto Madero','El Obelisco'], img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80'},
+  17:{city:'arg', label:'Miércoles 17 de marzo',  tag:'Buenos Aires',   title:'Buenos Aires — día 1',             desc:'Centro histórico y los barrios más icónicos de la ciudad porteña.', spots:['Casa Rosada','San Telmo','Caminito','La Boca'], img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80'},
+  18:{city:'arg', label:'Jueves 18 de marzo',     tag:'Buenos Aires',   title:'Buenos Aires — día 2',             desc:'Barrios con encanto, cultura y una noche porteña para recordar.', spots:['Recoleta','Palermo','Parques','Cena porteña'], img:'https://images.unsplash.com/photo-1612108500414-fa4d4e9c5e7b?w=800&q=80'},
+  19:{city:'arg', label:'Viernes 19 de marzo',    tag:'Buenos Aires',   title:'Buenos Aires — día 3',             desc:'Más tiempo para explorar: mercados, teatro, el puerto o una excursión al Delta del Tigre.', spots:['Mercado San Telmo','Puerto Madero','MALBA','Tigre opcional'], img:'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=800&q=80'},
+  20:{city:'fly', label:'Sábado 20 de marzo',     tag:'Vuelo EZE→USH',  title:'Buenos Aires → Ushuaia ✈',         desc:'Vuelo EZE–USH. Llegada al confín del mundo, check-in y primer paseo por el centro de Ushuaia.', spots:['Vuelo EZE–USH','Centro Ushuaia','Letrero Fin del Mundo'], img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'},
+  21:{city:'ush', label:'Domingo 21 de marzo',    tag:'Ushuaia',        title:'Parque Nacional Tierra del Fuego', desc:'Día completo en uno de los parques más australes del planeta.', spots:['P. N. Tierra del Fuego','Tren del Fin del Mundo','Senderos'], img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'},
+  22:{city:'ush', label:'Lunes 22 de marzo',      tag:'Ushuaia',        title:'Canal Beagle',                     desc:'Navegación por las aguas que Darwin recorrió. Faro Les Éclaireurs y tarde libre en la ciudad.', spots:['Canal Beagle','Faro Les Éclaireurs','City tour'], img:'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80'},
+  23:{city:'fly', label:'Martes 23 de marzo',     tag:'Vuelo USH→EZE',  title:'Ushuaia → Buenos Aires ✈',         desc:'Vuelo USH–EZE. Llegada y noche de descanso en Buenos Aires.', spots:['Vuelo USH–EZE','Noche en BA'], img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80'},
+  24:{city:'fly', label:'Miércoles 24 de marzo',  tag:'Vuelo EZE→IGR',  title:'Buenos Aires → Puerto Iguazú ✈',  desc:'Vuelo temprano EZE–IGR. Tarde libre y visita al Hito Tres Fronteras.', spots:['Vuelo EZE–IGR','Hito Tres Fronteras','Tarde libre'], img:'https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=800&q=80'},
+  25:{city:'igu', label:'Jueves 25 de marzo',     tag:'Iguazú',         title:'Cataratas del Iguazú 💦',          desc:'Una de las maravillas naturales del mundo, desde temprano. Vuelo nocturno de regreso a Buenos Aires.', spots:['Cataratas del Iguazú','Pasarelas','Vuelo nocturno EZE'], img:'https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=800&q=80'},
+  26:{city:'fly', label:'Viernes 26 de marzo',    tag:'Vuelo EZE→SCL',  title:'Buenos Aires → Santiago ✈',        desc:'Vuelo EZE–SCL. De regreso a Chile para el último día del viaje.', spots:['Vuelo EZE–SCL','Llegada Santiago'], img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=800&q=80'},
+  27:{city:'scl', label:'Sábado 27 de marzo',     tag:'Santiago',       title:'Santiago — último día',            desc:'Cerro San Cristóbal, Bellavista, compras o simplemente disfrutar la ciudad.', spots:['Cerro San Cristóbal','Bellavista','Souvenirs','Última cena'], img:'https://images.unsplash.com/photo-1562614558-1a30e4c3c80d?w=800&q=80'},
+  28:{city:'fly', label:'Domingo 28 de marzo',    tag:'Vuelo SCL→ECU',  title:'Santiago → Ecuador ✈ ¡Regreso!',  desc:'Vuelo internacional de regreso. 13 días, 4 destinos, una aventura para siempre. ¡Hasta la próxima!', spots:['Vuelo SCL–ECU','¡Llegada a casa!'], img:'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80'}
+};
 
-const DAYS = [
-  { city:'scl', date:'Sáb 15 mar', num:'15', title:'Llegamos a Santiago ✈', desc:'Vuelo desde Ecuador. Llegada, check-in y descanso total. ¡El viaje comienza!', spots:[], img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=600&q=80' },
-  { fly:true, emoji:'✈️', route:'Domingo 16 — Santiago → Buenos Aires', note:'Vuelo SCL–EZE a primera hora. Llegada, check-in y recorrido tranquilo por Puerto Madero o el Obelisco.' },
-  { city:'arg', date:'Lun 17 mar', num:'17', title:'Buenos Aires — día 1', desc:'Centro histórico y los barrios más icónicos de la ciudad porteña.', spots:['Casa Rosada','San Telmo','Caminito','La Boca'], img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=600&q=80' },
-  { city:'arg', date:'Mar 18 mar', num:'18', title:'Buenos Aires — día 2', desc:'Barrios con encanto, cultura y una noche porteña para recordar.', spots:['Recoleta','Palermo','Parques','Cena porteña'], img:'https://images.unsplash.com/photo-1612108500414-fa4d4e9c5e7b?w=600&q=80' },
-  { city:'arg', date:'Mié 19 mar', num:'19', title:'Buenos Aires — día 3', desc:'Más tiempo para explorar: mercados, teatros, el puerto o simplemente perderse en la ciudad.', spots:['Mercado de San Telmo','Puerto Madero','MALBA','Tigre opcional'], img:'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=600&q=80' },
-  { fly:true, emoji:'✈️', route:'Jueves 20 — Buenos Aires → Ushuaia', note:'Vuelo EZE–USH. Llegada al confín del mundo, check-in y centro de Ushuaia.' },
-  { city:'ush', date:'Vie 21 mar', num:'21', title:'Parque Nacional Tierra del Fuego', desc:'Día completo en uno de los parques más australes del planeta. Tren del Fin del Mundo.', spots:['P. N. Tierra del Fuego','Tren del Fin del Mundo','Letrero Fin del Mundo'], img:'https://images.unsplash.com/photo-1531761535209-83ea2fd9d8ce?w=600&q=80' },
-  { city:'ush', date:'Sáb 22 mar', num:'22', title:'Canal Beagle', desc:'Navegación por las aguas que Darwin recorrió. Faro y tarde libre en la ciudad.', spots:['Canal Beagle','Faro Les Éclaireurs','City tour'], img:'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=600&q=80' },
-  { fly:true, emoji:'✈️', route:'Domingo 23 — Ushuaia → Buenos Aires', note:'Vuelo USH–EZE. Llegada y noche de descanso.' },
-  { fly:true, emoji:'✈️', route:'Lunes 24 — Buenos Aires → Puerto Iguazú', note:'Vuelo temprano EZE–IGR. Tarde libre y visita al Hito Tres Fronteras 🇦🇷🇧🇷🇵🇾' },
-  { city:'igu', date:'Mar 25 mar', num:'25', title:'Cataratas del Iguazú 💦', desc:'Una de las maravillas naturales del mundo, desde temprano. Vuelo nocturno de regreso a Buenos Aires.', spots:['Cataratas del Iguazú','Pasarelas','Vuelo nocturno EZE'], img:'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80' },
-  { fly:true, emoji:'✈️', route:'Miércoles 26 — Buenos Aires → Santiago', note:'Vuelo EZE–SCL. De regreso a Chile para los días finales.' },
-  { city:'scl', date:'Jue 27 mar', num:'27', title:'Santiago — día final', desc:'Último día en Chile. Cerro San Cristóbal, Bellavista, compras o simplemente disfrutar la ciudad.', spots:['Cerro San Cristóbal','Bellavista','Souvenirs','Última cena'], img:'https://images.unsplash.com/photo-1562614558-1a30e4c3c80d?w=600&q=80' },
-  { fly:true, emoji:'🏠', route:'Viernes 28 — Santiago → Ecuador ✈', note:'¡Regreso a casa! 13 días, 4 destinos, una aventura para siempre.' },
-];
-
-const DESTS = [
-  { cls:'dc-scl', flag:'🇨🇱', name:'Santiago de Chile', nights:'1 noche llegada + 1 noche final = 2 noches', spots:'Plaza de Armas · Cerro Santa Lucía · Cerro San Cristóbal · Lastarria · Providencia · Bellavista', img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=600&q=80' },
-  { cls:'dc-arg', flag:'🇦🇷', name:'Buenos Aires', nights:'3 noches + tránsitos', spots:'Puerto Madero · Casa Rosada · La Boca · Caminito · San Telmo · Recoleta · Palermo · MALBA', img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=600&q=80' },
-  { cls:'dc-ush', flag:'🏔️', name:'Ushuaia', nights:'2 noches', spots:'Fin del Mundo · P. N. Tierra del Fuego · Tren del Fin del Mundo · Canal Beagle · Faro Les Éclaireurs', img:'https://images.unsplash.com/photo-1531761535209-83ea2fd9d8ce?w=600&q=80' },
-  { cls:'dc-igu', flag:'💦', name:'Puerto Iguazú', nights:'1 noche', spots:'Cataratas del Iguazú · Hito Tres Fronteras (AR · BR · PY)', img:'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&q=80' },
-];
-
-const FLIGHTS = [
-  { route:'🇪🇨 Ecuador ↔ Chile 🇨🇱', pareja:{p:'$1,146',n:'$690 ida + $456 vuelta · por pareja'}, persona:{p:'$573',n:'$345 ida + $228 vuelta'} },
-  { route:'🇨🇱 Chile → Argentina 🇦🇷', pareja:{p:'$300',n:'~$150 por persona × 2'}, persona:{p:'$150',n:'~$150 por persona'} },
-  { route:'🇦🇷 Buenos Aires ↔ Ushuaia 🏔️', pareja:{p:'$410',n:'$240 con maleta + $170 sin maleta'}, persona:{p:'$205',n:'$120 c/maleta + $85 sin (aprox)'} },
-  { route:'🇦🇷 Buenos Aires ↔ Iguazú 💦', pareja:{p:'$360',n:'$180 por persona × 2'}, persona:{p:'$180',n:'$180 por persona'} },
-];
-
-// Hero slideshow
-const slidesEl=document.getElementById('heroSlides');
-const dotsEl=document.getElementById('heroDots');
-HERO_IMGS.forEach((src,i)=>{
-  const s=document.createElement('div');
-  s.className='hslide'+(i===0?' active':'');
-  s.style.backgroundImage=`url(${src})`;
-  slidesEl.appendChild(s);
-  const d=document.createElement('button');
-  d.className='hdot'+(i===0?' active':'');
-  d.onclick=()=>goSlide(i);
-  dotsEl.appendChild(d);
-});
-let cur=0;
-function goSlide(n){
-  slidesEl.children[cur].classList.remove('active');
-  dotsEl.children[cur].classList.remove('active');
-  cur=n;
-  slidesEl.children[cur].classList.add('active');
-  dotsEl.children[cur].classList.add('active');
+// Build calendar grid
+// Mar 2027: day 1 = Lunes = col index 0. No empty cells needed.
+const calDays = document.getElementById('calDays');
+for(let d=1; d<=31; d++){
+  const cell = document.createElement('div');
+  const trip = TRIP[d];
+  if(trip){
+    cell.className = 'cal-cell trip';
+    cell.innerHTML = `<div class="cal-num">${d}</div><span class="cal-tag ${trip.city}">${trip.tag}</span>`;
+    cell.onclick = () => openDetail(d);
+  } else {
+    cell.className = 'cal-cell';
+    cell.innerHTML = `<div class="cal-num">${d}</div>`;
+  }
+  calDays.appendChild(cell);
 }
-setInterval(()=>goSlide((cur+1)%HERO_IMGS.length),4500);
+
+function openDetail(day){
+  const d = TRIP[day];
+  if(!d) return;
+  document.querySelectorAll('.cal-cell').forEach(c => c.classList.remove('selected'));
+  [...document.querySelectorAll('.cal-cell.trip')].find(c => c.querySelector('.cal-num').textContent == day)?.classList.add('selected');
+  document.getElementById('detailBar').className = 'detail-city-bar ' + d.city;
+  document.getElementById('detailImg').src = d.img;
+  document.getElementById('detailImg').alt = d.title;
+  document.getElementById('detailDate').textContent = d.label;
+  document.getElementById('detailTitle').textContent = d.title;
+  document.getElementById('detailDesc').textContent = d.desc;
+  document.getElementById('detailSpots').innerHTML = d.spots.map(s=>`<span class="dspot">${s}</span>`).join('');
+  const panel = document.getElementById('detailPanel');
+  panel.classList.add('open');
+  setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
+}
+function closeDetail(){
+  document.getElementById('detailPanel').classList.remove('open');
+  document.querySelectorAll('.cal-cell').forEach(c=>c.classList.remove('selected'));
+}
 
 // Timeline
-const tl=document.getElementById('timeline');
+const TL_DAYS = [
+  {type:'card', city:'scl', date:'Lun 15 mar', num:'15', title:'Llegamos a Santiago ✈',           desc:'Vuelo desde Ecuador. Llegada, check-in y descanso total.', spots:[], img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=600&q=80'},
+  {type:'fly',  emoji:'✈️', route:'Martes 16 — Santiago → Buenos Aires',    note:'Vuelo SCL–EZE a primera hora. Llegada, check-in y recorrido por Puerto Madero o el Obelisco.'},
+  {type:'card', city:'arg', date:'Mié 17 mar', num:'17', title:'Buenos Aires — día 1',             desc:'Centro histórico y los barrios más icónicos de la ciudad porteña.', spots:['Casa Rosada','San Telmo','Caminito','La Boca'], img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=600&q=80'},
+  {type:'card', city:'arg', date:'Jue 18 mar', num:'18', title:'Buenos Aires — día 2',             desc:'Barrios con encanto, cultura y una noche porteña para recordar.', spots:['Recoleta','Palermo','Parques','Cena porteña'], img:'https://images.unsplash.com/photo-1612108500414-fa4d4e9c5e7b?w=600&q=80'},
+  {type:'card', city:'arg', date:'Vie 19 mar', num:'19', title:'Buenos Aires — día 3',             desc:'Más tiempo para explorar: mercados, teatro, el puerto o una excursión al Delta del Tigre.', spots:['Mercado San Telmo','Puerto Madero','MALBA','Tigre opcional'], img:'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=600&q=80'},
+  {type:'fly',  emoji:'✈️', route:'Sábado 20 — Buenos Aires → Ushuaia',     note:'Vuelo EZE–USH. Llegada al confín del mundo, check-in y centro de Ushuaia.'},
+  {type:'card', city:'ush', date:'Dom 21 mar', num:'21', title:'Parque Nacional Tierra del Fuego', desc:'Día completo en uno de los parques más australes del planeta.', spots:['P. N. Tierra del Fuego','Tren del Fin del Mundo','Senderos'], img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'},
+  {type:'card', city:'ush', date:'Lun 22 mar', num:'22', title:'Canal Beagle',                     desc:'Navegación por las aguas que Darwin recorrió. Faro y tarde libre en la ciudad.', spots:['Canal Beagle','Faro Les Éclaireurs','City tour'], img:'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80'},
+  {type:'fly',  emoji:'✈️', route:'Martes 23 — Ushuaia → Buenos Aires',     note:'Vuelo USH–EZE. Llegada y noche de descanso.'},
+  {type:'fly',  emoji:'✈️', route:'Miércoles 24 — Buenos Aires → Puerto Iguazú', note:'Vuelo temprano EZE–IGR. Tarde libre y visita al Hito Tres Fronteras 🇦🇷🇧🇷🇵🇾'},
+  {type:'card', city:'igu', date:'Jue 25 mar', num:'25', title:'Cataratas del Iguazú 💦',          desc:'Una de las maravillas naturales del mundo, desde temprano. Vuelo nocturno de regreso a Buenos Aires.', spots:['Cataratas del Iguazú','Pasarelas','Vuelo nocturno EZE'], img:'https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=600&q=80'},
+  {type:'fly',  emoji:'✈️', route:'Viernes 26 — Buenos Aires → Santiago',   note:'Vuelo EZE–SCL. De regreso a Chile para el último día.'},
+  {type:'card', city:'scl', date:'Sáb 27 mar', num:'27', title:'Santiago — último día',            desc:'Cerro San Cristóbal, Bellavista, compras o simplemente disfrutar la ciudad.', spots:['Cerro San Cristóbal','Bellavista','Souvenirs','Última cena'], img:'https://images.unsplash.com/photo-1562614558-1a30e4c3c80d?w=600&q=80'},
+  {type:'fly',  emoji:'🏠', route:'Domingo 28 — Santiago → Ecuador ✈',      note:'¡Regreso a casa! 13 días, 4 destinos, una aventura para siempre.'},
+];
+
 const cityLabels={scl:'🇨🇱 Santiago de Chile',arg:'🇦🇷 Buenos Aires',ush:'🏔️ Ushuaia',igu:'💦 Puerto Iguazú'};
+const tl=document.getElementById('timeline');
 let lastCity='';
-DAYS.forEach((d,idx)=>{
-  if(d.fly){
-    const row=document.createElement('div');
-    row.className='fly-row';
-    row.innerHTML=`<div class="fly-icon">${d.emoji}</div><div><div class="fly-route">${d.route}</div><div class="fly-note">${d.note}</div></div>`;
-    tl.appendChild(row);
-    return;
+TL_DAYS.forEach(d=>{
+  if(d.type==='fly'){
+    const r=document.createElement('div');r.className='fly-row';
+    r.innerHTML=`<div class="fly-icon">${d.emoji}</div><div><div class="fly-route">${d.route}</div><div class="fly-note">${d.note}</div></div>`;
+    tl.appendChild(r);return;
   }
   if(d.city!==lastCity){
-    const h=document.createElement('div');
-    h.className='tl-city-header';
+    const h=document.createElement('div');h.className='tl-city-header';
     h.innerHTML=`<div class="city-pill ${d.city}">${cityLabels[d.city]}</div><div class="tl-city-line"></div>`;
-    tl.appendChild(h);
-    lastCity=d.city;
+    tl.appendChild(h);lastCity=d.city;
   }
-  const card=document.createElement('div');
-  card.className='day-card';
-  card.innerHTML=`
-    <div class="day-img">
-      <img src="${d.img}" alt="${d.title}" loading="lazy">
-      <div class="day-num-badge">${d.num}</div>
-    </div>
-    <div class="day-body">
-      <p class="day-date-lbl">${d.date}</p>
-      <p class="day-title">${d.title}</p>
-      <p class="day-desc">${d.desc}</p>
-      ${d.spots.length?`<div class="day-spots">${d.spots.map(s=>`<span class="spot">${s}</span>`).join('')}</div>`:''}
-    </div>`;
+  const card=document.createElement('div');card.className='day-card';
+  card.innerHTML=`<div class="day-img"><img src="${d.img}" alt="${d.title}" loading="lazy"><div class="day-num-badge">${d.num}</div></div><div class="day-body"><p class="day-date-lbl">${d.date}</p><p class="day-title">${d.title}</p><p class="day-desc">${d.desc}</p>${d.spots.length?`<div class="day-spots">${d.spots.map(s=>`<span class="spot">${s}</span>`).join('')}</div>`:''}</div>`;
   tl.appendChild(card);
 });
 
 // Destinos
-const dg=document.getElementById('destGrid');
-DESTS.forEach(d=>{
-  dg.innerHTML+=`<div class="dest-card ${d.cls}"><div class="dest-img"><img src="${d.img}" alt="${d.name}" loading="lazy"></div><div class="dest-info"><div class="dest-flag">${d.flag}</div><h3>${d.name}</h3><span class="dest-nights">${d.nights}</span><p>${d.spots}</p></div></div>`;
-});
+const DESTS=[
+  {cls:'dc-scl',flag:'🇨🇱',name:'Santiago de Chile',nights:'1 noche llegada + 1 noche final',spots:'Plaza de Armas · Cerro Santa Lucía · Cerro San Cristóbal · Lastarria · Bellavista',img:'https://images.unsplash.com/photo-1524397057410-1e775ed476f3?w=600&q=80'},
+  {cls:'dc-arg',flag:'🇦🇷',name:'Buenos Aires',nights:'3 noches + tránsitos',spots:'Puerto Madero · Casa Rosada · La Boca · Caminito · San Telmo · Recoleta · Palermo',img:'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=600&q=80'},
+  {cls:'dc-ush',flag:'🏔️',name:'Ushuaia',nights:'2 noches',spots:'Fin del Mundo · P. N. Tierra del Fuego · Tren del Fin del Mundo · Canal Beagle · Faro Les Éclaireurs',img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'},
+  {cls:'dc-igu',flag:'💦',name:'Puerto Iguazú',nights:'1 noche',spots:'Cataratas del Iguazú · Hito Tres Fronteras (AR · BR · PY)',img:'https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=600&q=80'},
+];
+document.getElementById('destGrid').innerHTML=DESTS.map(d=>`<div class="dest-card ${d.cls}"><div class="dest-img"><img src="${d.img}" alt="${d.name}" loading="lazy"></div><div class="dest-info"><div class="dest-flag">${d.flag}</div><h3>${d.name}</h3><span class="dest-nights">${d.nights}</span><p>${d.spots}</p></div></div>`).join('');
 
 // Flights
+const FLIGHTS=[
+  {route:'🇪🇨 Ecuador ↔ Chile 🇨🇱',pareja:{p:'$1,146',n:'$690 ida + $456 vuelta · por pareja'},persona:{p:'$573',n:'$345 ida + $228 vuelta'}},
+  {route:'🇨🇱 Chile → Argentina 🇦🇷',pareja:{p:'$300',n:'~$150 por persona × 2'},persona:{p:'$150',n:'~$150 por persona'}},
+  {route:'🇦🇷 Buenos Aires ↔ Ushuaia 🏔️',pareja:{p:'$410',n:'$240 con maleta + $170 sin maleta'},persona:{p:'$205',n:'$120 c/maleta + $85 sin (aprox)'}},
+  {route:'🇦🇷 Buenos Aires ↔ Iguazú 💦',pareja:{p:'$360',n:'$180 por persona × 2'},persona:{p:'$180',n:'$180 por persona'}},
+];
 let curPax='pareja';
-function renderFlights(){
-  document.getElementById('flightRows').innerHTML=FLIGHTS.map((f,i)=>`
-    <div class="flight-row">
-      <div><p class="fr-route">${f.route}</p><p class="fr-note">${f[curPax].n}</p></div>
-      <p class="fr-price">${f[curPax].p}</p>
-    </div>`).join('');
-}
+function renderFlights(){document.getElementById('flightRows').innerHTML=FLIGHTS.map(f=>`<div class="flight-row"><div><p class="fr-route">${f.route}</p><p class="fr-note">${f[curPax].n}</p></div><p class="fr-price">${f[curPax].p}</p></div>`).join('');}
 renderFlights();
-function setPax(key,btn){
-  curPax=key;
-  document.querySelectorAll('.pax-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderFlights();
-  const t={pareja:{v:'$2,216',l:'por pareja'},persona:{v:'$1,108',l:'por persona'}};
-  document.getElementById('totalVal').textContent=t[key].v;
-  document.getElementById('paxLbl').textContent=t[key].l;
-}
+function setPax(key,btn){curPax=key;document.querySelectorAll('.pax-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderFlights();const t={pareja:{v:'$2,216',l:'por pareja'},persona:{v:'$1,108',l:'por persona'}};document.getElementById('totalVal').textContent=t[key].v;document.getElementById('paxLbl').textContent=t[key].l;}
 
-function showTab(id,btn){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo({top:document.querySelector('.nav').offsetTop-1,behavior:'smooth'});
-}
+// Hero slideshow
+const HERO_IMGS=['https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80','https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=1600&q=80','https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80','https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=1600&q=80'];
+const sEl=document.getElementById('heroSlides'),dEl=document.getElementById('heroDots');
+HERO_IMGS.forEach((src,i)=>{const s=document.createElement('div');s.className='hslide'+(i===0?' active':'');s.style.backgroundImage=`url(${src})`;sEl.appendChild(s);const d=document.createElement('button');d.className='hdot'+(i===0?' active':'');d.onclick=()=>goSlide(i);dEl.appendChild(d);});
+let cur=0;
+function goSlide(n){sEl.children[cur].classList.remove('active');dEl.children[cur].classList.remove('active');cur=n;sEl.children[cur].classList.add('active');dEl.children[cur].classList.add('active');}
+setInterval(()=>goSlide((cur+1)%HERO_IMGS.length),4500);
+
+function showTab(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');window.scrollTo({top:document.querySelector('.nav').offsetTop-1,behavior:'smooth'});}
 </script>
 </body>
 </html>
